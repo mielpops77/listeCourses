@@ -1,0 +1,25 @@
+
+   <mat-selection-list #food > 
+      <mat-list-option class = "text" *ngFor = "let bp of allFoods" [value] = 'bp._id' >
+
+          <p><img  class ="image"src="{{bp.image}} "> <span style="color: #424242" >................</span> <a [routerLink]="['/admin/foods-edits', bp._id]">{{bp.nom}}  </a></p>
+      </mat-list-option > 
+    </mat-selection-list >
+   
+
+    <mat-card>
+        Aliments selectionné : {{food.selectedOptions.selected.length}}</mat-card>
+
+
+        <mat-card>
+            <mat-card-actions>
+              <button mat-button (click) = "deleteFoods(food.selectedOptions.selected)" *ngIf = "food.selectedOptions.selected.length">delete</button>
+              <button mat-button (click) = "test()" >create</button>
+            </mat-card-actions>
+        </mat-card>
+
+        <app-create-food></app-create-food>
+    
+  
+
+        

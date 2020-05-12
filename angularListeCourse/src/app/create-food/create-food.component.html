@@ -1,0 +1,15 @@
+<mat-card>
+        <form [formGroup]="creationForm" #formDirective="ngForm" (submit)="createFood(formDirective)">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="nom" formControlName="nom" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="image" formControlName="image" required>
+            </mat-form-field>
+       
+            <button mat-button type="submit">create blog post</button>
+          </div>
+        </form>
+      </mat-card>
+      

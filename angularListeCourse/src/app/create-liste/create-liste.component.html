@@ -1,0 +1,24 @@
+<h2 class ="titre">Commencez à ajouter des produits à votre liste : {{nomListeActuel}} </h2>
+
+
+   <mat-selection-list #food > 
+        <mat-list-option class = "text" *ngFor = "let bp of allFoods"[value] = 'bp.nom' >
+            <mat-icon mat-list-icon> <img  class ="image"src="{{bp.image}} "  > </mat-icon>
+          {{bp.nom}} 
+        </mat-list-option > 
+      </mat-selection-list >
+     
+  
+      <mat-card>
+          Aliments selectionné : {{food.selectedOptions.selected.length}}</mat-card>
+  
+  
+          <mat-card>
+              <mat-card-actions>
+                <button mat-button (click) = "listeCreate(food.selectedOptions.selected)" *ngIf = "food.selectedOptions.selected.length">Terminé</button>
+              </mat-card-actions>
+          </mat-card>
+      
+    
+  
+          

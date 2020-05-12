@@ -1,0 +1,19 @@
+<mat-card *ngIf="foods as bp; else loading">
+    <form #formDirective="ngForm" (submit)="updateFoods()">
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="nom" [(ngModel)]="bp.nom" name="nom" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="image" [(ngModel)]="bp.image" name="image"  required>
+        </mat-form-field>
+       
+        <button mat-button type="submit" [disabled]="!formDirective.form.valid">update food</button>
+        <a routerLink="/admin"><button mat-button>Retour</button></a>
+      </div>
+    </form>
+  </mat-card>
+  
+  <ng-template #loading>
+    loading...
+  </ng-template>

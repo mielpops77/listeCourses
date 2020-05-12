@@ -1,0 +1,80 @@
+
+   
+   <div *ngIf ="id==='0'">
+   <mat-selection-list #food > 
+         <mat-list-option *ngFor = "let bp of tab1" [value] = 'bp.nom' style="background-color: #424242;" >
+          <p> <img  class ="image"src="{{bp.url}} "  >   {{bp.nom}}  <span *ngIf="bp.achat ===true">✔</span></p>
+      </mat-list-option > 
+    </mat-selection-list >
+   
+
+    <mat-card>
+
+         
+        Aliments selectionné : {{food.selectedOptions.selected.length}}</mat-card>
+
+        <mat-card>
+                  <mat-card-actions>
+                    <button mat-button (click) = "achatlst1(food.selectedOptions.selected)" *ngIf = "food.selectedOptions.selected.length">Achat</button>
+                  </mat-card-actions>
+
+                  <mat-card-actions>
+                  <a routerLink="/"><button mat-button>Retour</button></a> 
+                  </mat-card-actions>
+
+              </mat-card>
+     
+      </div>
+
+
+
+      <div *ngIf ="id==='1'">
+            <mat-selection-list #food2 > 
+                  <mat-list-option  *ngFor = "let bp of tab2" [value] = 'bp.nom' style="background-color: #424242;" >
+                        <p><img  class ="image"src="{{bp.url}} "  > {{bp.nom}}  <span *ngIf="bp.achat ===true">✔</span></p>
+
+         
+               </mat-list-option > 
+             </mat-selection-list >
+            
+         
+             <mat-card>
+                 Aliments selectionné : {{food2.selectedOptions.selected.length}}</mat-card>
+                 <mat-card>
+                  <mat-card-actions>
+                    <button mat-button (click) = "achatlst2(food2.selectedOptions.selected)" *ngIf = "food2.selectedOptions.selected.length">Achat</button>
+                  </mat-card-actions>
+                  <mat-card-actions>
+                    <a routerLink="/"><button mat-button>Retour</button></a> 
+                    </mat-card-actions>
+                  
+              </mat-card>
+               </div>
+  
+
+      
+               <div *ngIf ="id==='2'">
+                     <mat-selection-list #food3 > 
+                           <mat-list-option  *ngFor = "let bp of tab3"  [value] = 'bp.nom' style="background-color: #424242;">
+                               <p>  <img  class ="image"src="{{bp.url}} "  > {{bp.nom}} <span *ngIf="bp.achat ===true">✔</span></p>
+                  
+                        </mat-list-option > 
+                      </mat-selection-list >
+                     
+                  
+                      <mat-card>
+                          Aliments selectionné : {{food3.selectedOptions.selected.length}}</mat-card>
+                  
+                          <mat-card>
+                              <mat-card-actions>
+                                <button mat-button (click) = "achatlst3(food3.selectedOptions.selected)" *ngIf = "food3.selectedOptions.selected.length">Achat</button>
+                              </mat-card-actions>
+
+                              <mat-card-actions>
+                                <a routerLink="/"><button mat-button>Retour</button></a> 
+                                </mat-card-actions>
+                          </mat-card>
+                       
+                        </div>
+
+        

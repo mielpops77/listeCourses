@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center">
+        <div class="col-sm-3 col-sm-offset-2"style="text-align:center">
+            
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="form-group">
+                    <label>Nom de votre liste</label>
+                    <input type="text" placeholder="Nouvelle liste"  class="form-control"  formControlName="listeName"  ngModel required>
+                </div>
+                
+                
+                
+                <button class="btn btn-primary"  type="submit">Créer</button>
+             </form>
+
+    
+        </div>
+      </div> 

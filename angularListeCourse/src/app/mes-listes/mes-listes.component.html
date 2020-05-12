@@ -1,0 +1,41 @@
+<div class="contenaire">
+        <div class="col">
+            <div class="col">
+          
+              
+              
+
+              <ul class="list-group " >
+                <li class="list-group-item"  *ngIf="i>0" >  
+                    
+                    <a [routerLink]="['/singleList', 0]"><p [ngStyle]="{color:getColor()}"> Ma liste : {{nomListe[1].name}} <span class="right">{{compteurAchatLst1}}/{{nbrArticleL1}}</span></p> </a>               
+                </li>
+
+                <li class="list-group-item" *ngIf="i>1" >  
+                    
+                    <a [routerLink]="['/singleList', 1]"> <p [ngStyle]="{color:getColor2()}">Ma liste :  {{nomListe[2].name}}<span class="right">{{compteurAchatLst2}}/{{nbrArticleL2}}</span></p></a>        
+                </li>
+
+                <li class="list-group-item" *ngIf="i>2" >  
+                    
+                    <a [routerLink]="['/singleList', 2]">   <p [ngStyle]="{color:getColor3()}">Ma liste : {{nomListe[3].name}} <span class="right">{{compteurAchatLst3}}/{{nbrArticleL3}}</span></p> </a>          
+                </li>
+
+              </ul>
+            </div>
+        </div>      
+      </div>
+    
+    
+    
+    
+    
+    <img class ="image" src="../assets/images.png" >
+    <p class="text" *ngIf="i==0">Créez votre première liste appuyez simplement sur le bouton bleu</p>
+    <p class="text" *ngIf="i==1">Créez une deuxième liste appuyez simplement sur le bouton bleu</p>
+    <p class="text" *ngIf="i==2">Créez une troisième liste appuyez simplement sur le bouton bleu</p>
+    <p class="text" *ngIf="i==3">Vous avez atteint le nombre maximum de liste</p>
+
+    <a routerLink='create-liste-name'><div class ="button"  *ngIf="3>i"><input  type="button"  class="w3-circle w3-blue" value="+"></div></a>
+    
+    
